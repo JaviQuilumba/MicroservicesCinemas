@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  service-cinemas:
+   build: ./cinemas-service
+   ports:
+     - 8082:3005
+  service-movies:
+   build: ./list-service
+   ports:
+     - 8083:3003
+  service-video:
+   build: ./video-service
+   ports:
+     - 8084:3004

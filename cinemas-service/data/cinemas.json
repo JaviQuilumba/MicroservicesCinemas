@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 2,
+    "name": "Cinemark",
+    "location": "Av. Interoceanica Y Francisco De Orellana"
+  },
+  {
+    "id": 3,
+    "name": "Multicines",
+    "location": "Av. Mariscal Sucre Y Av. John F.Kennedy, Condado Shopping"
+  },
+  {
+    "id": 4,
+    "name": "Multicines",
+    "location": "Avenida Amazonas y Naciones Unidas, Av. Naciones Unidas"
+  },
+  {
+    "id": 5,
+    "name": "Multicines",
+    "location": "Pje. El Valle, Quito 170157"
+  },
+  {
+    "id": 6,
+    "name": "Supercines",
+    "location": "Av. 6 de Diciembre, Quito 170135"
+  },
+  {
+    "id": 7,
+    "name": "Supecines",
+    "location": "Av. Mariscal Sucre Y Av. John F.Kennedy, Condado Shopping"
+  },
+  {
+    "id": 8,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 9,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 10,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 11,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 12,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 13,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 14,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  },
+  {
+    "id": 15,
+    "name": "Cinemark",
+    "location": "Plaza Las Américas, Av. República s/n y, Av. Naciones Unidas"
+  }
+]
