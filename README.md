@@ -27,10 +27,10 @@ Command to shut down the container:
 To use the project you must execute the commands described in the previous point. When you run it in the terminal, you will be able to find URLs that you can open locally and you will be able to see the different services it offers, such as listing the different cinemas, listing the movies and movie trailer videos.
 </p>
 
+![Captura de pantalla 2024-07-06 133519](https://github.com/JaviQuilumba/MicroservicesCinemas/assets/167824357/47bbd4e8-a527-44da-bad5-3b4d6307efe9)
 ![Captura de pantalla 2024-07-06 121849](https://github.com/JaviQuilumba/MicroservicesCinemas/assets/167824357/51da0d8a-9c86-4cac-b5a8-bdbbea5981a5)
 ![Captura de pantalla 2024-07-06 121922](https://github.com/JaviQuilumba/MicroservicesCinemas/assets/167824357/2d890ea4-3e93-4eb8-846f-dc554e73d742)
 ![Captura de pantalla 2024-07-06 122016](https://github.com/JaviQuilumba/MicroservicesCinemas/assets/167824357/127ddf0e-8f23-4ad9-a6ac-6a6c9ed4a761)
-![Captura de pantalla 2024-07-06 133519](https://github.com/JaviQuilumba/MicroservicesCinemas/assets/167824357/844a8464-43e7-4dda-9f48-21b5fec6fc8e)
 
 
 ####  Collaborators :tw-1f466:
