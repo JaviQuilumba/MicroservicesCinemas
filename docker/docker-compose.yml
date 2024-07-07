@@ -3,12 +3,12 @@ services:
   service-cinemas:
    build: ./cinemas-service
    ports:
-     - 8082:3005
+     - 8075:3005
   service-movies:
    build: ./list-service
    ports:
-     - 8083:3003
+     - 8073:3003
   service-video:
    build: ./video-service
    ports:
-     - 8084:3004
+     - 8074:3004
