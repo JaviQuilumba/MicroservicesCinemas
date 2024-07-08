@@ -1,14 +1,14 @@
 version: "3.9"
 services:
   service-cinemas:
-   build: ./cinemas-service
+   build: ../cinemas-service
    ports:
      - 8075:3005
   service-movies:
-   build: ./list-service
+   build: ../list-service
    ports:
      - 8073:3003
   service-video:
-   build: ./video-service
+   build: ../video-service
    ports:
      - 8074:3004
