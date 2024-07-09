@@ -39,11 +39,11 @@ The links:
 
 http:localhost:8082/api/cinemas
 
-http:localhost:8095/api/moviesList
+http:localhost:8083/api/moviesList
 
-http:localhost:8095/api/video/1
+http:localhost:8084/api/video/1
 
-http:localhost:8095/api/video/2
+http:localhost:8084/api/video/2
 
 ###  Collaborators :boy:
 Carlos Daniel Tapia Ortiz
