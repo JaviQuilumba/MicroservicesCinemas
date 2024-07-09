@@ -43,7 +43,7 @@ jobs:
     - name: Execute Docker Compose
       run: |
         docker-compose -f ./docker/docker-compose.yml up -d
-        
+
   deploy-AWS:
     needs: [build-and-push]  
     runs-on: ubuntu-latest
@@ -55,6 +55,13 @@ jobs:
         echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem
         chmod 600 key.pem
 
+    
+    - name: Pull Docker images
+      run: |
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/video-service'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/list-service'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cinemas-service'
+
     - name: Stop running containers
       run: |
         ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker stop video-service-aws || true'
@@ -63,15 +70,9 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker rm list-service-aws || true'
         ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker stop cinemas-service-aws || true'
         ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker rm cinemas-service-aws || true'
-    
-    - name: Pull Docker images
-      run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/video-service:latest'
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/list-service:latest'
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cinemas-service:latest'
 
     - name: Run new containers
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name video-service-aws -p 8074:3004 ${{ secrets.DOCKERHUB_USERNAME }}/video-service:latest'
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name list-service-aws -p 8073:3003 ${{ secrets.DOCKERHUB_USERNAME }}/list-service:latest'
-        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name cinemas-service-aws -p 8075:3005 ${{ secrets.DOCKERHUB_USERNAME }}/cinemas-service:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name video-service-aws -p 8074:3004 ${{ secrets.DOCKERHUB_USERNAME }}/video-service'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name list-service-aws -p 8073:3003 ${{ secrets.DOCKERHUB_USERNAME }}/list-service'
+        ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_HOST }} 'sudo docker run -d --name cinemas-service-aws -p 8075:3005 ${{ secrets.DOCKERHUB_USERNAME }}/cinemas-service'
