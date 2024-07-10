@@ -47,6 +47,7 @@ http:localhost:8084/api/video/2
 ## Warning:
 <p>
 The above instructions are for local execution with Docker Desktop.
+
 To deploy to AWS EC2, the following requirements must be taken into account:
 </p>
 
