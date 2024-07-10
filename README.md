@@ -61,7 +61,6 @@ To deploy to AWS EC2, the following requirements must be taken into account:
 - secrets.DOCKERHUB_TOKEN: DockerHub login token.
 - secrets.AWS_PRIVATE_KEY: AWS generated key pair.
 
-
 ###  Collaborators :boy:
 Carlos Daniel Tapia Ortiz
 https://github.com/cdto17
